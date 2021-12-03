@@ -1,0 +1,35 @@
+@startuml
+
+interface Participant{
+ + canContinue();
+ + run();
+ + jump();
+}
+
+class Human implements Participant{
+    private int maxRunDistance;
+    private int maxJumpHeight;
+    private boolean canContinue = true;
+}
+
+class Cat implements Participant{
+    private int maxRunDistance;
+    private int maxJumpHeight;
+    private boolean canContinue = true;
+}
+
+class Robot implements Participant{
+    private int maxRunDistance;
+    private int maxJumpHeight;
+    private boolean canContinue = true;
+}
+
+abstract class Obstacle {}
+
+class Treadmill extends Obstacle{
+}
+
+class Wall extends Obstacle{
+}
+
+@enduml
